@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home_page.dart';
+
 class IntroPage extends StatelessWidget {
   const IntroPage({Key? key}) : super(key: key);
 
@@ -22,7 +24,7 @@ class IntroPage extends StatelessWidget {
               ),
               SizedBox(height: 48,),
               //title
-              Text("Just Do It",
+              const Text("Just Do It",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
@@ -31,7 +33,7 @@ class IntroPage extends StatelessWidget {
               SizedBox(height: 24,),
 
               //tagline
-              Text("Brand new sneakers and custom kicks made with premium quality",
+              const Text("Brand new sneakers and custom kicks made with premium quality",
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.grey
@@ -49,8 +51,8 @@ class IntroPage extends StatelessWidget {
                     color: Colors.grey[900],
                     borderRadius: BorderRadius.circular(12)
                   ),
-                  padding: EdgeInsets.all(20),
-                  child: Center(
+                  padding: const EdgeInsets.all(20),
+                  child: const Center(
                     child: Text("Shop Now",
                     style: TextStyle(
                       color: Colors.white,
@@ -62,7 +64,6 @@ class IntroPage extends StatelessWidget {
                   ),
                 ),
               )
-
             ],
           ),
         ),
