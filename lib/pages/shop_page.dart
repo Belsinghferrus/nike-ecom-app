@@ -80,7 +80,11 @@ class _ShopPageState extends State<ShopPage> {
            }
           ),
         ),
-        Padding(padding: EdgeInsets.symmetric(vertical: 25))
+        Padding(padding: EdgeInsets.symmetric(vertical: 25),
+        child: Divider(
+          color: Colors.white,
+        ),
+        )
       ],
     );
   }
