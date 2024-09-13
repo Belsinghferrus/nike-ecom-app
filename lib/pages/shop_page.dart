@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nike/models/shoe.dart';
 
 import '../components/shoe_tile.dart';
 
@@ -64,11 +65,22 @@ class _ShopPageState extends State<ShopPage> {
         //shoe tile
         Expanded(
             child: ListView.builder(
+              itemCount: 4,
+                scrollDirection: Axis.horizontal,
                 itemBuilder: (centext,index) {
-               return ShoeTile();
+                  Shoe shoe = Shoe(
+                      name:  "Air Jordan",
+                      price: '2800',
+                      imagepath: "lib/images/nike2.png",
+                      description: "A Cool shoe"
+                  );
+               return ShoeTile(
+                 shoe: shoe,
+               );
            }
           ),
         ),
+        Padding(padding: EdgeInsets.symmetric(vertical: 25))
       ],
     );
   }
