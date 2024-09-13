@@ -1,8 +1,9 @@
 
 
+import 'package:flutter/material.dart';
 import 'package:nike/models/shoe.dart';
 
-class Cart {
+class Cart extends ChangeNotifier {
   //list of shoes
   List<Shoe> shoeShop = [
     Shoe(
@@ -18,13 +19,13 @@ class Cart {
         description: "Up your running game with the Nike Men's Revolution 7 Running shoes."
     ),
     Shoe(
-        name: "Downshifter 13",
+        name: "Downshifter",
         price: "4295",
         imagepath: "lib/images/nike3.png",
         description: "Are you just starting out in the world of running or do you want to take your skills to the next level? The Downshifter 13 is exactly what you need."
     ),
     Shoe(
-        name: "Air Mac Sneakers",
+        name: "Air Mac ",
         price: "4316",
         imagepath: "lib/images/nike4.png",
         description: "What you do is up to you. Just do it."
@@ -47,10 +48,12 @@ class Cart {
   //add item to cart
     void addItemToCart(Shoe shoe) {
       userCart.add(shoe);
+      notifyListeners();
     }
 
   //remove item from cart
     void removeItemFromCart (Shoe shoe){
           userCart.remove(shoe);
+          notifyListeners();
     }
 }
