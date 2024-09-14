@@ -65,7 +65,7 @@ class ShoeTile extends StatelessWidget {
                       borderRadius: BorderRadius.only(topLeft: Radius.circular(12),
                       ),
                     ),
-                      child: Icon(Icons.add,
+                      child: const Icon(Icons.add,
                       color: Colors.white,
                       size: 30,
                       ),

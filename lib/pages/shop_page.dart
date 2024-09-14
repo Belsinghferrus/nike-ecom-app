@@ -24,7 +24,15 @@ class _ShopPageState extends State<ShopPage> {
         builder: (context) => AlertDialog(
           title: Text("Successfully added to cart"),
           content: Text("Check your cart"),
+          actions: [
+            TextButton(
+              child: Text("OK"),
+            onPressed:(){
+              Navigator.of(context).pop();
+               } ,
 
+    )
+          ],
         )
     );
   }
